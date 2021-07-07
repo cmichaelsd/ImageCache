@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val url = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/1920px-The_Earth_seen_from_Apollo_17.jpg"
-        val path = ImageCache(this).saveOrRetrieve(url, "supplements")
+        val path = ImageCache(this).saveOrRetrieve(url, ImageCache.SUPPLEMENTS_DIRECTORY)
         val imageView: ImageView = findViewById(R.id.imageView)
         Glide.with(this)
             .load(path)
